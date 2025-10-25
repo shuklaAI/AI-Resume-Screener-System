@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Resume Screener</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="p-4">
+    <h1 class="mb-4">AI Powered Resume Screening System</h1>
+    <form action="/" method="post" enctype="multipart/form-data" class="card p-4 shadow-lg">
+        <div class="mb-3">
+            <label class="form-label">Role Type:</label><br>
+            <input type="radio" name="role_type" value="Internship" checked> Internship
+            <input type="radio" name="role_type" value="Full-Time"> Full-Time
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Describe Your Requirements:</label>
+            <textarea name="job_desc" class="form-control" rows="4" placeholder="Enter job description"></textarea>
+        </div>
+        <div class="mb-3">
+            <label class="form-label">Upload Resumes:</label>
+            <input type="file" name="resumes" multiple class="form-control">
+            <small class="text-muted">You can select multiple PDF or DOCX files at once.</small>
+        </div>
+        <button type="submit" class="btn btn-primary">Analyze</button>
+    </form>
+</body>
+</html>

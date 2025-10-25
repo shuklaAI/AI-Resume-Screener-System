@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Details — {{ r.filename }}</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body class="bg-light">
+<div class="container py-4">
+  <a href="{{ url_for('index') }}" class="btn btn-link">&larr; Back</a>
+  <div class="card shadow-sm p-3">
+    <h4>{{ r.filename }} <small class="text-muted"> — Score: {{ r.score }}%</small></h4>
+    <hr/>
+
+    <h6>AI Explainer</h6>
+    <ul>
+      <li><strong>Matched keywords:</strong> {{ r.matched_keywords|join(', ') if r.matched_keywords else 'None' }}</li>
+      <li><strong>Missing keywords:</strong> {{ r.missed_keywords|join(', ') if r.missed_keywords else 'None' }}</li>
+      <li><strong>Experience detected:</strong>
+        {% if r.detected_experience == 'fresher' %}
+          Fresher (auto-assigned 0–2 years)
+        {% elif r.detected_experience is none and r.role_type == 'job' %}
+          <span class="text-danger">Not mentioned — you can provide it below</span>
+        {% else %}
+          {{ r.detected_experience }}
+        {% endif %}
+      </li>
+    </ul>
+
+    <h6>Why this score?</h6>
+    <p>
+      The AI computed a semantic similarity between the resume and your job description, 
+      then adjusted it for role-specific factors (experience for full-time roles). 
+      Matched keywords increased the score; missing keywords and lack of projects or achievements reduced it.
+    </p>
+
+    <h6>Suggestions to Improve</h6>
+    {% if r.suggestions %}
+      <ul>
+        {% for s in r.suggestions %}
+          <li>{{ s }}</li>
+        {% endfor %}
+      </ul>
+    {% else %}
+      <p class="text-muted">No major improvements suggested.</p>
+    {% endif %}
+
+    {% if r.missing_experience %}
+      <hr/>
+      <h6>Provide estimated years of experience</h6>
+      <form method="POST" action="{{ url_for('rescore') }}">
+        <input type="hidden" name="filename" value="{{ r.filename }}">
+        <div class="mb-2">
+          <select name="experience_bucket" class="form-select w-50">
+            <option value="0-1">0-1</option>
+            <option value="1-3">1-3</option>
+            <option value="3-5">3-5</option>
+            <option value="5-10">5-10</option>
+            <option value="10+">10+</option>
+          </select>
+        </div>
+        <button class="btn btn-success">Apply Experience & Re-score</button>
+      </form>
+    {% endif %}
+
+    <hr/>
+    <h6>Resume Text Preview (first 1000 characters)</h6>
+    <pre style="white-space:pre-wrap; max-height:300px; overflow:auto;">{{ r.text[:1000] }}{% if r.text|length > 1000 %}...{% endif %}</pre>
+  </div>
+</div>
+</body>
+</html>
