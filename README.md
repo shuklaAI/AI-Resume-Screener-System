@@ -5,11 +5,12 @@ An intelligent web-based application that automatically analyzes, scores, and sh
 
 Screenshots:
 
-<img width="1105" height="175" alt="image" src="https://github.com/user-attachments/assets/725fcd01-ada7-48d7-ac0f-32872c37704a" />
-<img width="1118" height="619" alt="image" src="https://github.com/user-attachments/assets/d2928b51-acdb-464b-b57d-4676ba47d766" />
-<img width="1125" height="619" alt="image" src="https://github.com/user-attachments/assets/121baefc-15a5-4783-b5eb-064e9e62ab5c" />
-<img width="1114" height="580" alt="image" src="https://github.com/user-attachments/assets/16447cc0-a1c3-4503-9e0d-5c98dea016f3" />
-<img width="1132" height="200" alt="image" src="https://github.com/user-attachments/assets/b46fe9c3-b9a4-4cf0-8ccb-b2f4e3847266" />
+<img width="1109" height="487" alt="image" src="https://github.com/user-attachments/assets/63eac6d1-4cc8-418a-a317-48c2d818a367" />
+<img width="1105" height="175" alt="image" src="https://github.com/user-attachments/assets/d8e6770d-e635-41b4-84d0-6e2aec0d49ec" />
+<img width="1125" height="619" alt="image" src="https://github.com/user-attachments/assets/8aca2d84-59e8-410b-b78e-b7049788d458" />
+<img width="1132" height="200" alt="image" src="https://github.com/user-attachments/assets/2bc9da6b-cedf-4bd3-9a78-db24c261eed9" />
+<img width="1114" height="580" alt="image" src="https://github.com/user-attachments/assets/4c3f6b1b-1fdb-49fb-88eb-d151e67ff8dd" />
+
 
 
 🚀 Features
