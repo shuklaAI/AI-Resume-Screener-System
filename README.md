@@ -2,6 +2,16 @@ AI Powered Resume Screening System
 
 An intelligent web-based application that automatically analyzes, scores, and shortlists resumes based on a recruiter’s job description. Built with Flask, Python, and NLP, it simulates how a recruiter evaluates resumes — focusing on relevance, experience, and key skills.
 
+
+Screenshots:
+
+<img width="1105" height="175" alt="image" src="https://github.com/user-attachments/assets/725fcd01-ada7-48d7-ac0f-32872c37704a" />
+<img width="1118" height="619" alt="image" src="https://github.com/user-attachments/assets/d2928b51-acdb-464b-b57d-4676ba47d766" />
+<img width="1125" height="619" alt="image" src="https://github.com/user-attachments/assets/121baefc-15a5-4783-b5eb-064e9e62ab5c" />
+<img width="1114" height="580" alt="image" src="https://github.com/user-attachments/assets/16447cc0-a1c3-4503-9e0d-5c98dea016f3" />
+<img width="1132" height="200" alt="image" src="https://github.com/user-attachments/assets/b46fe9c3-b9a4-4cf0-8ccb-b2f4e3847266" />
+
+
 🚀 Features
 
 AI-Powered Resume Analysis:
@@ -51,7 +61,7 @@ AI_Resume_Screener/
 🧩 How to Run Locally
 
 Clone the repo:
-git clone https://github.com/yourusername/AI_Resume_Screener.git
+git clone https://github.com/shuklaAI/AI-Resume-Screener-System
 cd AI_Resume_Screener
 
 
@@ -71,5 +81,9 @@ http://127.0.0.1:5000/
 Integration with OpenAI API for deeper semantic understanding.
 
 Exportable PDF report for each candidate.
+
+
+
+
 
 Recruiter dashboard with analytics.
